@@ -17,6 +17,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        repositoryName: 'tz-main',
+        schemas: {
+          section: require('./custom_types/section.json')
+        }
+        
+      }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

@@ -1,6 +1,5 @@
 import React from 'react'
 import tw, {styled } from 'twin.macro'
-import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.section(({ reversed }) => [
     tw`border-4 border-black w-full flex flex-row`,
@@ -13,7 +12,7 @@ const images = [
     "../images/van4.png",
 ]
 
-function Section({title, children, imgNumber, alt, reversed}) {
+function Section({title, children, image, alt, reversed}) {
     return (
         <Wrapper reversed={reversed}>
         <div tw="flex-1">
@@ -22,10 +21,10 @@ function Section({title, children, imgNumber, alt, reversed}) {
             <p>
                         { children}
             </p>
-
           </div>
         </div>
-            <StaticImage src={images[imgNumber]} alt={alt } tw="flex-1" objectFit="cover"/>
+                <img tw="flex-1 object-cover" src={image} alt={ alt}/>
+            
       </Wrapper>
     )
 }

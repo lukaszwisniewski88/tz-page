@@ -1,0 +1,37 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "title",
+        "placeholder": "Tytuł sekcji"
+      }
+    },
+    "body": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "body",
+        "placeholder": "Opis"
+      }
+    },
+    "image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "image"
+      }
+    },
+    "reversed": {
+      "type": "Boolean",
+      "config": {
+        "placeholder_false": "NIE",
+        "placeholder_true": "TAK",
+        "default_value": false,
+        "label": "reversed"
+      }
+    }
+  }
+}
