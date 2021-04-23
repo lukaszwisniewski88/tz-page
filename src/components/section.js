@@ -23,7 +23,9 @@ function Section({title, children, image, alt, reversed}) {
             </p>
           </div>
         </div>
-                <img tw="flex-1 object-cover" src={image} alt={ alt}/>
+        <div tw="flex-1">
+          <img tw="object-cover" src={image} alt={ alt}/>
+        </div>
             
       </Wrapper>
     )
