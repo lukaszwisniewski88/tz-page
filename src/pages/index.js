@@ -1,5 +1,5 @@
 import React from "react"
-import tw from "twin.macro"
+import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Section from "../components/section"
 import Seo from "../components/seo"
@@ -16,21 +16,23 @@ const IndexPage = ({
         lang="pl"
         description="TZ Transport przewoźnik na którym można polegać, przesyłki drobnicowe, oraz ekspresowe"
       />
-      {sections.map(({ node: { data } }) => (
+      {sections.map(({ node: { data, id } }) => (
         <Section
-          alt={data.image.alt}
-          image={data.image.url}
-          title={data.title.text}
-          reversed={ data.reversed}
-        >
+          key={ id}
+            alt={data.image.alt}
+            image={data.image.url}
+            title={data.title.text}
+            reversed={data.reversed}
+          >
           {data.body.text}
-        </Section>
+          </Section>
       ))}
-      
     </>
   )
 }
-
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+}
 export default IndexPage
 export const query = graphql`
   {
@@ -50,6 +52,7 @@ export const query = graphql`
               text
             }
           }
+          id
         }
       }
     }

@@ -5,6 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    "gatsby-plugin-eslint",
     `gatsby-plugin-layout`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
@@ -18,14 +19,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-source-prismic',
+      resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: 'tz-main',
+        repositoryName: "tz-main",
         schemas: {
-          section: require('./custom_types/section.json')
-        }
-        
-      }
+          section: require("./custom_types/section.json"),
+        },
+      },
     },
     `gatsby-plugin-sharp`,
     {
