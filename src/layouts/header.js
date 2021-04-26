@@ -34,9 +34,9 @@ const Header = () => (
       Twoja przesyłka w dobrych rękach
     </p>
     <nav tw="flex flex-col space-y-4 justify-center items-center z-10 text-center p-4">
-      <MenuButton href="#flota">flota</MenuButton>
-      <MenuButton href="#projekty">projekty</MenuButton>
-      <MenuButton href="#onas">o nas</MenuButton>
+      <MenuButton href="#Flota">flota</MenuButton>
+      <MenuButton href="#Projekty">projekty</MenuButton>
+      <MenuButton href="#O nas">o nas</MenuButton>
       <MenuButton primary href="#Kontakt">
         kontakt
       </MenuButton>

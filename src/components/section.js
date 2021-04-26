@@ -9,7 +9,7 @@ const Wrapper = styled.section(({ reversed }) => [
 
 function Section({ title, children, image, alt, reversed }) {
   return (
-    <Wrapper reversed={reversed}>
+    <Wrapper id={title} reversed={reversed}>
       <div tw="flex-1">
         <div tw="p-4 pt-8 text-center space-y-3.5">
           <h3 tw="font-bold text-xl uppercase">{title}</h3>
