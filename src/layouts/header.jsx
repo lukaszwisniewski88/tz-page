@@ -1,19 +1,19 @@
-import * as React from "react"
-import tw, { css, styled } from "twin.macro"
-import { StaticImage } from "gatsby-plugin-image"
-import Logo from "../components/logo"
+import * as React from 'react';
+import tw, { css, styled } from 'twin.macro';
+import { StaticImage } from 'gatsby-plugin-image';
+import Logo from '../components/logo';
 
 const takeUp = css`
   ${tw`z-10`}
-`
+`;
 const wrapperStyle = css`
   ${tw`flex flex-col items-center relative p-4 gap-4`}
-`
+`;
 
 const MenuButton = styled.a(({ primary }) => [
   tw`text-black font-extrabold uppercase bg-gray-300 p-4 text-center rounded w-full hover:bg-opacity-80`,
   primary && tw`bg-gray-50`,
-])
+]);
 const Header = () => (
   <header css={wrapperStyle}>
     <StaticImage
@@ -42,6 +42,6 @@ const Header = () => (
       </MenuButton>
     </nav>
   </header>
-)
+);
 
-export default Header
+export default Header;

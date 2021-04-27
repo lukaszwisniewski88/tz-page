@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 function Logo() {
   return (
@@ -24,13 +24,14 @@ function Logo() {
       <rect
         x="4"
         y="4"
+        S
         width="219"
         height="219"
         stroke="white"
         strokeWidth="6.61841"
       />
     </svg>
-  )
+  );
 }
 
-export default Logo
+export default Logo;

@@ -1,13 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
-import tw, { styled } from "twin.macro"
+import React from 'react';
+import PropTypes from 'prop-types';
+import tw, { styled } from 'twin.macro';
 
 const Wrapper = styled.section(({ reversed }) => [
   tw`border-4 border-black w-full flex flex-row`,
   reversed && tw`flex-row-reverse`,
-])
+]);
 
-function Section({ title, children, image, alt, reversed }) {
+function Section({
+  title, children, image, alt, reversed,
+}) {
   return (
     <Wrapper id={title} reversed={reversed}>
       <div tw="flex-1">
@@ -20,14 +22,14 @@ function Section({ title, children, image, alt, reversed }) {
         <img tw="object-cover" src={image} alt={alt} />
       </div>
     </Wrapper>
-  )
+  );
 }
 
 Section.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.node,
-  image: PropTypes.string,
-  alt: PropTypes.string,
-  reversed: PropTypes.bool,
-}
-export default Section
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  reversed: PropTypes.bool.isRequired,
+};
+export default Section;
